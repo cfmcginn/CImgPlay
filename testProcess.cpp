@@ -41,7 +41,11 @@ int main(int argc, char* argv[])
   }
 
   for(std::set<int>::iterator it = pixSet_p->begin(); it != pixSet_p->end(); it++){
-    std::cout << *it << std::endl;
+    std::cout << *it << ", " << (*it)/1000 << ", " << (*it)%1000<< std::endl;
+
+    for(int rgbIter = 0; rgbIter < 3; rgbIter++){
+      imgMod((*it)/1000, (*it)%1000, 0, rgbIter) = 255;
+    }
   }
 
   img.save("testPhoto_YOLO.jpg");
