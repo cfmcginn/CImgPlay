@@ -2,7 +2,7 @@
 
 if [ $# -ne 1 ]
 then
-  echo "Usage: ./pmakeDiJetIniSkim.sh <inFileName>"
+  echo "Usage: ./ptestProcess.sh <inFileName>"
   return
 fi
 
