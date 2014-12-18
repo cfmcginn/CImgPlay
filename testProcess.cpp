@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <stdlib.h>
-#include "CImg/CImg.h"
+#include "CImg.h"
 
 void rgbToGrey(cimg_library::CImg<unsigned char>* inRGB_p, cimg_library::CImg<unsigned char>& outGrey);
 float getMedianGreyScale(cimg_library::CImg<unsigned char>* inGrey_p);
@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
   for(int pixIter = 0; pixIter < nOutPic; pixIter++){
     pixNum[pixIter] = pixIter*imgWidth*imgDepth/nOutPic;
 
-    imgSamples[pixIter] = new cimg_library::CImg<unsigned char>
+    imgSamples[pixIter] = new cimg_library::CImg<unsigned char>;
   }
 
 
